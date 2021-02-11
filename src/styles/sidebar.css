@@ -1,0 +1,7 @@
+.sidebar {
+    height: 40vh;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
