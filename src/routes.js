@@ -19,17 +19,10 @@ const routes = () => {
                     </>
                 )} />
                 <Route path="/signin" component={FormLogin} />
-                <Route path="/dashboard" render={() => (
+                <Route path="/dashboard/:dashId" render={() => (
                     <>
                         <NavBar />
-                        <div className="main">
-                            <DashBoard />
-                        </div>
-                    </>
-                )} />
-                <Route path="/dashboard/:id" render={() => (
-                    <>
-                        <NavBar />
+                        <DashBoard />
                     </>
                 )} />
                 <Route path="/hostales" render={()=>(

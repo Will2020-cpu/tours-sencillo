@@ -3,11 +3,12 @@ import Hero from '../Components/Hero'
 import SectionFiltro from '../Components/SectionFiltro'
 import SectionCandelario from '../Components/SectionCandelario'
 import SectionRooms from '../Components/SectionRooms'
-
+import CardHostales from '../Components/CardHostales'
 
 
 //10% del valor 100.000 10.000
 const MainContainer = () => {
+    
     return (
         <>
             <Hero/>
@@ -23,6 +24,14 @@ const MainContainer = () => {
                         <SectionRooms />
                         <SectionRooms />
                         <SectionRooms />
+                    </div>
+                    <div className="my-20">
+                        <h1 className="text-center text-gray-600 text-3xl font-medium">Nuestros hostales</h1>
+                    </div> 
+                    <div className="grid lg:grid-cols-3 md:grid-cols-1 gap-4 my-20">
+                        <CardHostales/>
+                        <CardHostales/>
+                        <CardHostales/>
                     </div>
                 </div>
             </div>

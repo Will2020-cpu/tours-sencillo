@@ -8,9 +8,6 @@ import { deleteHostal } from '../helpers/SaveSession'
 import '../styles/NavBar.css';
 
 
-
-
-
 //Componente navbar primera seccion
 const NavBar = ({ user }) => {
     const [open, setOpen] = useState(false)
@@ -24,21 +21,21 @@ const NavBar = ({ user }) => {
                         "oculta": true,
                         "active space-y-8 text-center m-0":open
                     })}>
-                        <Link to="/" className="hover:text-yellow-700 transition duration-500 ease">Inicio</Link>
-                        <Link to="/hostales" className="hover:text-yellow-700 transition duration-500 ease">Hosteles</Link>
-                        <Link to="/" className="hover:text-yellow-700 transition duration-500 ease">Blog</Link>
-                        <Link to="/" className="hover:text-yellow-700 transition duration-500 ease">Rooms</Link>
-                        <Link to="/" className="hover:text-yellow-700 transition duration-500 ease">Contactos</Link>
+                        <Link to="/" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">Inicio</Link>
+                        <Link to="/hostales" onClick={() => setOpen(!open)}  className="hover:text-yellow-700 transition duration-500 ease">Hosteles</Link>
+                        <Link to="/" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">Blog</Link>
+                        <Link to="/" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">Rooms</Link>
+                        <Link to="/" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">Contactos</Link>
             
                         <div className="flex lg:flex-row  md:flex-col space-x-4">
                             {Object.keys(user).length > 0 ? (
                                 <div className="flex lg:flex-row md:flex-col space-x-4">
-                                    <Link to="/dashboard" className="hover:text-yellow-700 transition duration-500 ease">{user.nombre}</Link>
+                                    <Link to="/dashboard/reservation" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">{user.nombre}</Link>
                                     <Link to="/" onClick={()=>deleteHostal()} className="hover:text-yellow-700 transition duration-500 ease">Salir</Link>
 
                                 </div>
                             ):(
-                                <Link to="/signin" className="hover:text-yellow-700 transition duration-500 ease">Iniciar Sesion</Link>
+                                <Link to="/signin" onClick={() => setOpen(!open)} className="hover:text-yellow-700 transition duration-500 ease">Iniciar Sesion</Link>
                             )}
                         </div>
                     </nav>

@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../styles/sidebar.css'
 import { faDollarSign, faPersonBooth, faUsers } from '@fortawesome/free-solid-svg-icons';
 
+
+
 const Sidebar = () => {
     return (
         <>
